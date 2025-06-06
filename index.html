@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário de Eventos</title>
+  <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/styles/global.css">
+</head>
+<body>
+  <h1>Calendário de Eventos da Igreja</h1>
+  <div id="calendar"></div>
+  <script src="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
+<div style="text-align: center; margin-bottom: 20px;">
+  <label for="categoryFilter">Filtrar por categoria:</label>
+  <select id="categoryFilter">
+    <option value="">Todas</option>
+    <option value="Culto">Culto</option>
+    <option value="Estudo Bíblico">Estudo Bíblico</option>
+    <option value="Reunião">Reunião</option>
+  </select>
+</div>
+<div style="text-align: center; margin-bottom: 20px;">
+  <h3>Adicionar Evento</h3>
+  <form id="addEventForm">
+    <input type="text" id="eventTitle" placeholder="Título do Evento" required>
+    <input type="date" id="eventDate" required>
+    <select id="eventCategory" required>
+      <option value="">Categoria</option>
+      <option value="Culto">Culto</option>
+      <option value="Estudo Bíblico">Estudo Bíblico</option>
+      <option value="Reunião">Reunião</option>
+    </select>
+    <button type="submit">Adicionar Evento</button>
+  </form>
+</div>
